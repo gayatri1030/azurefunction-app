@@ -1,0 +1,36 @@
+module "azfunction" {
+  source                                          = "../../Terraform_Modules/AzureFunctionApp"
+  resource_group_name                             = var.usr_resource_group_name
+  location                                        = var.usr_location
+  environment                                     = var.usr_environment
+  storage_account_name                            = var.usr_storage_account_name
+  storage_account_resource_group_name             = var.usr_storage_account_resource_group_name
+  existing_app_service_plan_name                  = var.usr_existing_app_service_plan_name
+  function_app_name                               = ""
+  new_app_service_plan_name                       = var.usr_new_app_service_plan_name
+  linux_host                                      = var.usr_linux_host
+  app_service_plan_maximum_elastic_worker_count   = var.usr_app_service_plan_maximum_elastic_worker_count
+  consumption_app_service_plan                    = var.usr_consumption_app_service_plan
+  app_service_plan_sku_size                       = var.usr_app_service_plan_sku_size
+  app_service_plan_sku_tier                       = var.usr_app_service_plan_sku_tier
+  app_name                                        = var.usr_app_name
+  number_of_workers                               = var.usr_number_of_workers
+  tags                                            = var.usr_tags
+  function_app_settings                           = var.usr_function_app_settings
+  function_client_affinity_enabled                = var.usr_function_client_affinity_enabled
+  function_https_only                             = var.usr_function_https_only
+  function_daily_memory_quota                     = var.usr_function_daily_memory_quota
+  function_site_config_alwaysOn                   = var.usr_function_site_config_alwaysOn
+  function_site_config_cors_allowed_origins       = var.usr_function_site_config_cors_allowed_origins
+  function_site_config_cors_support_credentials   = var.usr_function_site_config_cors_support_credentials
+  function_site_config_ftps_state                 = var.usr_function_site_config_ftps_state
+  function_site_config_health_check_path          = var.usr_function_site_config_health_check_path
+  function_site_config_http2_enabled              = var.usr_function_site_config_http2_enabled
+  function_site_config_ip_restrictions            = var.usr_function_site_config_ip_restrictions
+  function_site_config_min_tls_version            = var.usr_function_site_config_min_tls_version
+  function_site_config_pre_warmed_instance_count  = var.usr_function_site_config_pre_warmed_instance_count
+  function_site_config_use_32_bit_worker_process  = var.usr_function_site_config_use_32_bit_worker_process
+  function_site_config_websockets_enabled         = var.usr_function_site_config_websockets_enabled
+  function_client_cert_mode                       = var.usr_function_client_cert_mode
+
+}
